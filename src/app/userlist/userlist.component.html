@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <div class="container color-dark">
+        <h2>Create New User</h2>
+        <div>
+          <div>
+            <div class="col">
+                <label for="name">Username:</label>
+                <input type="text" name="name" placeholder="User Name"/>
+            </div>
+            <br>
+            <div class="col">
+              <label for="email">Email ID:</label>
+              <input type="email" name="email" id="email" placeholder="Email ID"/>
+            </div>
+            <br>
+            <div class="col">
+              <label for="address">Address:</label>
+              <input type="text" name="address" placeholder="Address">
+            </div><br>
+            <div class="col">  
+              <label for="phone">Mobile Number:</label>   
+               <input type="tel" name="phone" placeholder="Phone Number">
+            </div><br>
+            <input type="button" value="button">
+          </div>
+        </div>
+        <h2>User List</h2>
+        <ul>
+          <li *ngFor="let user of users" [routerLink]="['details', user.name]">{{user.name}}</li>
+        </ul>
+      </div>      
+</body>
+</html>
+
+<router-outlet></router-outlet>
